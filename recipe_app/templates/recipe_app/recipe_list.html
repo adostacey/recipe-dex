@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+    bingo bango, here's the list page
+    {% if recipe_list %}
+        <ul>
+            {% for recipe in recipe_list %}<li><a href="#">{{ recipe.name }}</a></li>{% endfor %}
+        </ul>
+    {% else %}
+        Why is there no rum?
+    {% endif %}
+{% endblock content %}
