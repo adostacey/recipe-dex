@@ -26,6 +26,10 @@ class Recipe(models.Model):
     
     def __str__(self) -> str:
         return self.name
+    
+    class Meta:
+       ordering =  ["name"]
+    
 
 
 class Ingredient(models.Model):
